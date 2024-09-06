@@ -74,6 +74,13 @@
                 <div class="menu-title">Brand</div>
             </a>
         </li>
+        <li class="menu-label">Tax</li>
+        <li>
+            <a href="{{ url('admin/tax') }}">
+                <div class="parent-icon"><i class="bx bx-category"></i></div>
+                <div class="menu-title">Tax</div>
+            </a>
+        </li>
         <li class="menu-label">Pages</li>
         <li>
             <a href="{{ url('admin/profile') }}">

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\profileController;
 use App\Http\Controllers\Admin\sizeController;
 use App\Http\Controllers\Admin\colorController;
 use App\Http\Controllers\Admin\brandController;
+use App\Http\Controllers\Admin\taxController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -48,6 +49,10 @@ Route::post('/update_category_attribute', [categoryController::class, 'store_cat
 // Brand
 Route::get('/brands', [brandController::class, 'index']);
 Route::post('/updateBrand', [brandController::class, 'store']);
+
+// Tax
+Route::get('/tax', [taxController::class, 'index']);
+Route::post('/updateTax', [taxController::class, 'store']);
 
 // Delete data
 Route::get('/deleteData/{id?}/{table?}', [dashboardController::class, 'deleteData']);
