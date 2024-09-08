@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\sizeController;
 use App\Http\Controllers\Admin\colorController;
 use App\Http\Controllers\Admin\brandController;
 use App\Http\Controllers\Admin\taxController;
+use App\Http\Controllers\Admin\productController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -53,6 +54,10 @@ Route::post('/updateBrand', [brandController::class, 'store']);
 // Tax
 Route::get('/tax', [taxController::class, 'index']);
 Route::post('/updateTax', [taxController::class, 'store']);
+
+// Manage Products
+Route::get('/product', [productController::class, 'index']);
+Route::post('/updateProduct', [productController::class, 'store']);
 
 // Delete data
 Route::get('/deleteData/{id?}/{table?}', [dashboardController::class, 'deleteData']);
