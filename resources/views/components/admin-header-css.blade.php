@@ -63,5 +63,10 @@
         rel="stylesheet"
         href="{{ asset('snackbar/dist/js-snackbar.css') }}"
     />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{ asset('multiSelect/example-styles.css') }}"
+    />
     <title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
 </head>

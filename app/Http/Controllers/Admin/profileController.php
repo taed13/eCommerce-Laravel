@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use App\Traits\ApiResponse;
 
-
 class profileController extends Controller
 {
     use ApiResponse;
@@ -35,10 +34,10 @@ class profileController extends Controller
     public function store(Request $request)
     {
         $validation = Validator::make($request->all(), [
-            'name'    => 'required|string|max:255',
-            'email'   => 'required|string|email|unique:users,email,' . Auth::User()->id,
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|unique:users,email,' . Auth::User()->id,
             'phone' => 'required|string|max:20',
-            'image'   => 'mimes:jpeg,png,jpg,gif|max:5120',
+            'image' => 'mimes:jpeg,png,jpg,gif|max:5120',
             'address' => 'required|string|max:255',
             'twitter_link' => 'string|max:255',
             'insta_link' => 'string|max:255',

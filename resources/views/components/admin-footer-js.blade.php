@@ -15,6 +15,7 @@
 <script src="{{asset('assets/js/app.js')}}"></script>
 <script src="https://developercodez.com/developerCorner/parsley/parsley.min.js"></script>
 <script src="{{asset('snackbar/dist/js-snackbar.js')}}"></script>
+<script type="text/javascript" src="{{asset('multiSelect/jquery.multi-select.js')}}"></script>
 
 <script>
   $(document).ready(function() {
@@ -137,5 +138,31 @@
       .buttons()
       .container()
       .appendTo("#example2_wrapper .col-md-6:eq(0)");
+  });
+</script>
+
+<script type="text/javascript">
+  $(function () {
+    $("#attribute_id").multiSelect();
+    $("#ice-cream").multiSelect();
+    $("#line-wrap-example").multiSelect({
+      positionMenuWithin: $(".position-menu-within"),
+    });
+    $("#categories").multiSelect({
+      noneText: "All categories",
+      presets: [
+        {
+          name: "All categories",
+          all: true,
+        },
+        {
+          name: "My categories",
+          options: ["a", "c"],
+        },
+      ],
+    });
+    $("#modal-example").multiSelect({
+      modalHTML: '<div class="multi-select-modal">',
+    });
   });
 </script>
